@@ -1,38 +1,74 @@
-import DefaultLayout from "@/layouts/default";
-import { Button } from "@nextui-org/button";
-import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
-import { MdOutlinePermIdentity } from "react-icons/md";
+
 import Link from "next/link";
-export default function IndexPage() {
+import Image from 'next/image';
+const SolicitudDePermisos= () => {
   return (
-    <DefaultLayout>
-     
- <div>Departamento de Talento Humano</div>
- <Card className="py-4">
-      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-        <p className="text-tiny uppercase font-bold">Gestion de Recursos Humanos</p>
-        <small className="text-default-500">Solicitar su Permiso</small>
-        <h4 className="font-bold text-large">Aqui</h4>
-        <Link href="/Permiso">
-            <Button
-              color="success"
-              startContent={<MdOutlinePermIdentity />}
-              className="text-white"
-            >
-              Permisos
-            </Button>
-        </Link>
-      </CardHeader>
-      <CardBody className="overflow-visible py-2">
-        <Image
-          alt="Card background"
-          className="object-cover rounded-xl"
-          height={350}
-          src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          width={350}
-        />
-      </CardBody>
-    </Card>
-    </DefaultLayout>
-  );
+    <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
+      <div className="min-h-screen bg-white flex flex-col items-center justify-top">
+        {/* Main Container */}
+        <div className="w-full max-w-md bg-white rounded-lg p-6 space-y-2">
+          {/* Logo Section */}
+          <div className="text-center">
+            <img
+              src="/resource/usuario.png"
+              alt="Logo Talento Humano"
+              className="h-17  ml-auto mr-12 w-full max-w-[100px]"
+            />
+            <h1 className="text-blue-600 text-2xl md:text-3xl font-bold">
+              TALENTO HUMANO
+            </h1>
+          </div>
+          {/* Form Section */}
+          <div className="space-y-4">
+            <h2 className="text-gray-700 text-center text-sm mb-6">
+              Inicia sesión para continuar
+            </h2>
+            <form className="space-y-4">
+              {/* Email Field */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  CORREO ELECTRONICO
+                </label>
+                <input
+                  type="email"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="ejemplo@correoelectronico.com"
+                />
+              </div>
+              {/* Password Field */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  CONTRASEÑA
+                </label>
+                <input
+                  type="password"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="••••••••••"
+                />
+              </div>
+              {/* Login Button */}
+              <Link href="/permisos">
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white mt-6 py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                >
+                  INGRESAR
+                </button>
+              </Link>
+            </form>
+          </div>
+        </div>
+        {/* Footer Logo */}
+        <div className=" w-full max-w-[200px] bg-white rounded-lg p-4">
+          <img
+            src="resource/palenque.png"
+            alt="Alcaldia Ciudadana de Palenque"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+    </main>
+  )
 }
+
+export default SolicitudDePermisos

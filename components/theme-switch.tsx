@@ -70,6 +70,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
               "pt-px",
               "px-0",
               "mx-0",
+              "dark:bg-transparent"
             ],
             classNames?.wrapper,
           ),
