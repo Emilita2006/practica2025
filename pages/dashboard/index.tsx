@@ -10,7 +10,7 @@ export default function IndexPage() {
   
   const data = [
     { id: 1, name: 'Trabajado', value: 40 },
-    { id: 2, name: 'Restante', value: 60 },
+    { id: 2, name: 'Por trabajar', value: 60 },
   ];
   
   const COLORS = ['#2563eb', '#67e8f9'];
@@ -21,13 +21,13 @@ export default function IndexPage() {
 
   return (
     <DefaultLayout>
-      <div className="max-w-8xl mx-auto bg-white min-h-screen p-4 lg:p-8">
+      <div className="max-w-7xl mx-auto bg-white min-h-screen p-4 lg:p-8">
         {/* Profile Header - Made more prominent for desktop */}
-        <div className="flex items-center gap-4 mb-8 bg-white rounded-lg p-6 shadow">
-          <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gray-200 overflow-hidden">
+        <div className="flex items-center gap-4 mb-8 bg-white-700 rounded-lg p-6 shadow-sm">
+          <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gray-400 overflow-hidden">
             {isClient && (
               <img
-                src="resource/emily.jpg"
+                src="/resource/emily.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
@@ -35,7 +35,7 @@ export default function IndexPage() {
           </div>
           <div>
             <h1 className="text-xl lg:text-2xl font-semibold text-gray-900">Emily Cevillano</h1>
-            <p className="text-sm lg:text-base text-gray-500">emilycevillano@gmail.com</p>
+            <p className="text-sm lg:text-base text-gray-500">emily@gmail.com</p>
           </div>
         </div>
 
@@ -43,7 +43,7 @@ export default function IndexPage() {
           <div className="lg:col-span-8">
             {/* Stats Cards - Expanded for desktop */}
             <div className="grid grid-cols-3 gap-4 mb-6">
-              <Card className="p-4 lg:p-6 text-center hover:shadow-md transition-shadow-md">
+              <Card className="p-4 lg:p-6 text-center hover:shadow-md transition-shadow">
                 <CardContent className="p-0">
                   <Clock className="w-8 h-8 lg:w-10 lg:h-10 mx-auto mb-3 text-blue-600" />
                   <p className="text-sm lg:text-base text-gray-600">Días Laborados</p>
@@ -74,7 +74,7 @@ export default function IndexPage() {
                   <CardContent className="p-0">
                     {isClient && (
                       <img
-                        src="resource/Permisos-de-trabajo.jpg"
+                        src="/resource/Permisos-de-trabajo.jpg"
                         alt="Permiso"
                         className="w-full h-32 lg:h-40 object-cover rounded mb-3"
                       />
@@ -86,7 +86,7 @@ export default function IndexPage() {
                   <CardContent className="p-0">
                     {isClient && (
                       <img
-                        src="resource/espera.png"
+                        src="/resource/espera.png"
                         alt="Reporte"
                         className="w-full h-32 lg:h-40 object-cover rounded mb-3"
                       />
@@ -98,7 +98,7 @@ export default function IndexPage() {
                   <CardContent className="p-0">
                     {isClient && (
                       <img
-                        src="resource/historial.jpg"
+                        src="/resource/historial.jpg"
                         alt="Historico"
                         className="w-full h-32 lg:h-40 object-cover rounded mb-3"
                       />
@@ -135,7 +135,7 @@ export default function IndexPage() {
                   {data.map((entry, index) => (
                     <div key={entry.id} className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full" style={{ backgroundColor: COLORS[index] }} />
-                      <span className="text-sm text-gray-600">{entry.value}% {entry.name}</span>
+                      <span className="text-sm text-gray-600">{entry.name}</span>
                     </div>
                   ))}
                 </div>

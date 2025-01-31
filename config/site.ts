@@ -6,11 +6,11 @@ export const siteConfig = {
   navItems: [
     {
       label: "Inicio",
-      href: "/",
+      href: "/inicio",
     },
     {
       label: "Permisos",
-      href: "/permisos",
+      href: "/solicitud_permisos",
     },
   ],
   navMenuItems: [],

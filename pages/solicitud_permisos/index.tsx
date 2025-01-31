@@ -36,7 +36,7 @@ export default function IndexPage() {
 
   // Function to handle PDF printing
   const handlePrintPDF = () => {
-    const pdfUrl = '/resource/prueba.pdf';
+    const pdfUrl = '/resource/pdf-permiso.pdf';
     
     // Create a hidden iframe for printing
     const printFrame = document.createElement('iframe');
@@ -83,14 +83,14 @@ export default function IndexPage() {
     return (
       <div className="w-full h-[600px] dark:bg-gray-800">
         <iframe
-          src={`/resource/prueba.pdf#toolbar=0`}
+          src={`/resource/pdf-permiso.pdf#toolbar=0`}
           className="w-full h-full border-none bg-white dark:bg-gray-800"
           title="PDF Viewer"
         >
           <div className="text-center py-4">
             <p className="dark:text-gray-300">No se puede mostrar el PDF directamente.</p>
             <Link 
-              href="/resource/prueba.pdf" 
+              href="/resource/pdf-permiso.pdf" 
               target="_blank"
               className="text-blue-600 hover:text-blue-800 underline dark:text-blue-400 dark:hover:text-blue-300"
             >
@@ -163,7 +163,7 @@ export default function IndexPage() {
                   
                   {/* Action Buttons */}
                   <div className="flex justify-end space-x-4">
-                    <Link href="/resource/prueba.pdf" target="_blank">
+                    <Link href="/resource/pdf-permiso.pdf" target="_blank">
                       <button className="p-3 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50 rounded-lg transition-colors flex items-center">
                         <FileText className="w-5 h-5 mr-2" />
                         <span className="hidden lg:inline">Ver Documento</span>
@@ -215,7 +215,7 @@ export default function IndexPage() {
 
               <Card className="p-6 text-center bg-gradient-to-br from-blue-500 to-blue-600">
               <h2 className="text-xl font-semibold mb-4 text-white">Comprobante de permiso</h2>
-              <Link href="/solicitud_permisos">
+              <Link href="/formulario">
                 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors w-full font-semibold">
                   Generar comprobante
                 </button>

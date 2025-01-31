@@ -15,7 +15,7 @@ export default function DefaultLayout({
         {children}
       </main>
       <footer className="w-full flex items-center justify-center py-3">
-       <p className="text-2xl underline">Desarrollado por: Emily Cevillano</p>
+       <p className="text-2xl underline">Todos los derechos reservados ©</p>
       </footer>
     </div>
   );
